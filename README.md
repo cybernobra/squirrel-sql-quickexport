@@ -9,6 +9,31 @@ Right-click on a result table → **Quick export (last parameters)**, right belo
 **Export CSV / MS Excel / XML / JSON...** entry. 
 Also available in the **Session** menu or shortcut **Ctrl+Shift+E**.
 
+### Before: native export
+
+Right-click → **Export CSV / MS Excel / XML / JSON...** (1), then choose the file (2) and the format (3) in the export
+dialog, and confirm (4) — for every export.
+
+![Native export: right-click menu](docs/legacy-1-launch.png)
+
+![Native export: export dialog](docs/legacy-2-parameters.png)
+
+![Native export: confirmation](docs/legacy-3-done.png)
+
+### After: quick export
+
+Right-click → **Quick export (last parameters)** (5): the file is written at once, with the last parameters, and its
+name is shown in the message panel.
+
+![Quick export: right-click menu](docs/quickexport-1-launch.png)
+
+![Quick export: message panel](docs/quickexport-2-done.png)
+
+Here the result comes from the **Content** tab of the object tree, which has no SQL query, hence the default name
+`SQLRESULT_...`. From a SQL result tab, the name is built from the query (see below).
+
+### Parameters and file name
+
 The export reuses the last parameters of the native export dialog:
 
 - **directory**: the one of the last native export (a folder chooser is shown the very first time);
