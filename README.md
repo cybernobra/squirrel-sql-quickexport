@@ -6,7 +6,8 @@ export dialog, to an automatically named file.
 ## What it does
 
 Right-click on a result table → **Quick export (last parameters)**, right below the native
-*Export CSV / MS Excel / XML / JSON...* entry. Also available in the **Session** menu (shortcut **Ctrl+Shift+E**).
+**Export CSV / MS Excel / XML / JSON...** entry. 
+Also available in the **Session** menu or shortcut **Ctrl+Shift+E**.
 
 The export reuses the last parameters of the native export dialog:
 
