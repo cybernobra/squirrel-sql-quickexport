@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <groupId>be.squirrel_sql</groupId>
+   <artifactId>squirrel-sql-quickexport</artifactId>
+   <version>1.0.0</version>
+   <name>squirrel-sql-quickexport</name>
+   <description>SquirrelSQL plugin: quick export of the current result, file named SCHEMA_TABLE_date</description>
+
+   <licenses>
+      <license>
+         <name>GNU General Public License v3.0 or later</name>
+         <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+         <distribution>repo</distribution>
+      </license>
+   </licenses>
+
+   <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <!-- SquirrelSQL 5.0.0 is compiled for Java 17 and runs on Java 17+ -->
+      <maven.compiler.release>17</maven.compiler.release>
+      <!-- SquirrelSQL installation directory: set SQUIRREL_SQL_HOME or pass -Dsquirrel.home=... -->
+      <squirrel.home>${env.SQUIRREL_SQL_HOME}</squirrel.home>
+   </properties>
+
+   <dependencies>
+      <!-- Provided by SquirrelSQL at runtime: never bundled into the plugin jar -->
+      <dependency>
+         <groupId>net.sourceforge.squirrel-sql</groupId>
+         <artifactId>squirrel-sql</artifactId>
+         <version>5.0.0</version>
+         <scope>system</scope>
+         <systemPath>${squirrel.home}/squirrel-sql.jar</systemPath>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <!-- The jar name must match the internal name of the plugin (getInternalName) -->
+      <finalName>quickexport</finalName>
+      <resources>
+         <resource>
+            <directory>src/main/resources</directory>
+         </resource>
+         <!-- License shipped inside the plugin jar -->
+         <resource>
+            <directory>${project.basedir}</directory>
+            <includes>
+               <include>LICENSE</include>
+            </includes>
+         </resource>
+      </resources>
+   </build>
+</project>
