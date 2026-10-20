@@ -59,7 +59,7 @@ The file name is built from the SQL of the result and the query execution time:
 
 ## Requirements
 
-SquirrelSQL 5.0.0 (Java 17+). The plugin relies on SquirrelSQL internal export classes and may need to be rebuilt
+SquirrelSQL 5.0.0 or 5.1.0 (Java 17+). The plugin relies on SquirrelSQL internal export classes and may need to be rebuilt
 for another SquirrelSQL version.
 
 ## Build
